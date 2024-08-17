@@ -1,17 +1,15 @@
-from cgitb import text
-import chunk
-from json import load
-from math import e
+
 import os
-os.environ['OPENAI_API_KEY'] = 'sk-proj-qLYYKnijBqdK5mA8JOQ2T3BlbkFJbY357OmQzOv6SLlYxB5n'
-os.environ['LANGCHAIN_API_KEY']='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'
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings, OpenAI
 from langchain_community.vectorstores import FAISS
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain import hub # download the prompt from the hub
+from langchain import hub # download the prompt from the hub'
+from dotenv import load_dotenv
+
+load_dotenv() # load the .env file
 
 
 if __name__ == '__main__':
